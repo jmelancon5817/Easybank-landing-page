@@ -1,0 +1,145 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Public Sans", sans-serif;
+  font-size: var(--font-md);
+  color: var(--grayishBlue);
+  line-height: 1.3;
+}
+
+/* header */
+.header nav {
+  padding: 24px;
+}
+
+.header_logo {
+  width: 8.8125rem;
+  height: 1.375rem;
+}
+
+.header_menu > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: var(--darkblue);
+}
+
+.header_menu > span:not(last-child) {
+  margin-bottom: 3px;
+}
+
+.header_links a {
+  position: relative;
+
+  text-decoration: none;
+  font-size: var(--font-sm);
+  color: var(--grayishBlue);
+  transition: color 300ms ease-in-out;
+}
+
+.header_links a:not(:last-child) {
+  margin-right: 32px;
+}
+
+.header_links a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+  opacity: 0;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  transition: opacity 300ms ease-in-out;
+}
+
+.header_links a:hover {
+  color: var(--darkblue);
+}
+
+.header_links a:hover::before {
+  opacity: 1;
+}
+/* Flexbox */
+
+.flex {
+  display: flex;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+/* Buttons */
+button,
+.button {
+  padding: 0.875rem 2.1875rem;
+  background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+  border-radius: 50px;
+  border: 0;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: opacity 300ms ease-in-out;
+}
+
+button:hover,
+.button:hover {
+  opacity: 0.75;
+}
+
+/* Colors */
+:root {
+  --darkblue: hsl(233, 26%, 24%);
+  --limeGreen: hsl(136, 65%, 51%);
+  --brightCyan: hsl(192, 70%, 51%);
+  --grayishBlue: hsl(233, 8%, 62%);
+  --lightGrayishBlue: hsl(220, 16%, 96%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Font Sizes */
+:root {
+  --font-sm: 0.875rem;
+  --font-md: 1.125rem;
+}
+
+/* Visibility */
+@media (max-width: 64em) {
+  .header_links {
+    display: none;
+  }
+}
+
+@media (max-width: 40em) {
+  .header_button {
+    display: none;
+  }
+}
+
+@media (min-width: 40em) {
+  .header_menu {
+    display: none;
+  }
+}
