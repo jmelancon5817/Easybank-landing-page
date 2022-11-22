@@ -26,7 +26,10 @@ body {
 }
 
 .header nav {
-  padding: 24px;
+  position: relative;
+  background-color: var(--white);
+  padding-top: 1.0625rem;
+  padding-bottom: 1.0625rem;
 }
 
 .header_logo {
@@ -98,11 +101,36 @@ body {
 .header .overlay {
   opacity: 0;
   position: fixed;
-  top: 3.75rem;
+  top: 0px;
   right: 0px;
   left: 0px;
   bottom: 0px;
   background-image: linear-gradient(#2d314d, transparent);
+}
+
+/* Drop down menu */
+
+.nav_menu {
+  position: absolute;
+  width: calc(100% - 3rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+  margin-top: 1.5rem;
+  padding: 1.625rem;
+  border-radius: 5px;
+}
+
+.nav_menu a {
+  color: var(--darkblue);
+  padding: 0.625rem;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.no_scroll {
+  overflow: hidden;
 }
 /* Flexbox */
 
@@ -120,6 +148,12 @@ body {
 
 .ai-c {
   align-items: center;
+}
+
+/* Spacing */
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 /* Buttons */
@@ -177,6 +211,9 @@ button:hover,
 }
 
 /* Animations */
+.has-fade {
+  visibility: hidden;
+}
 
 .fade-in {
   animation: fade-in 300ms ease-in-out forwards;
