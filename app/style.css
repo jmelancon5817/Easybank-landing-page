@@ -18,10 +18,30 @@ body {
   line-height: 1.3;
 }
 
+/* Text */
 h1,
 h2,
 h3 {
+  font-weight: 200;
+
+  line-height: 1.15;
+  color: var(--darkblue);
   margin-top: 0px;
+}
+
+h1 {
+  font-size: 2.31rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+  margin-bottom: 2.25rem;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 2.25;
 }
 
 /* header */
@@ -142,6 +162,7 @@ h3 {
 /* Hero */
 .hero {
   background-color: var(--veryLightGray);
+  padding-bottom: 6rem;
 }
 
 .hero_image {
@@ -192,6 +213,41 @@ h3 {
   margin-bottom: 2.25;
 }
 
+/* Features */
+.features {
+  background-color: var(--lightGrayishBlue);
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.features h2 {
+  padding-top: 2rem;
+}
+.feature_intro {
+  margin-bottom: 3.75rem;
+}
+
+.feature_grid {
+}
+.feature_item {
+  padding: 0.9375rem;
+}
+.feature_icon {
+  margin-bottom: 1.875rem;
+}
+.feature_title {
+  font-size: 1.25rem;
+  font-weight: 200;
+  line-height: 1.15;
+  color: var(--darkblue);
+  margin-bottom: 1rem;
+}
+.feature_description {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
 /* Flexbox */
 
 .flex {
@@ -217,15 +273,15 @@ h3 {
 }
 
 .container--pall {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
 .container--py {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
 }
 
 .container--px {
@@ -233,13 +289,13 @@ h3 {
   padding-right: 1.5rem;
 }
 .container--pt {
-  padding-top: 2.25rem;
+  padding-top: 4.375rem;
 }
 .container--pr {
   padding-right: 1.5rem;
 }
 .container--pb {
-  padding-bottom: 2.25rem;
+  padding-bottom: 4.375rem;
 }
 .container--pl {
   padding-left: 1.5rem;
@@ -297,9 +353,15 @@ button:hover,
   }
 }
 
+@media (min-width: 64rem) {
+}
+
 @media (max-width: 40em) {
   .header_button {
     display: none;
+  }
+  h2 {
+    font-size: 1.875rem;
   }
 }
 
@@ -311,14 +373,14 @@ button:hover,
     display: flex;
     align-items: center;
   }
-
+  .hero {
+    padding-bottom: 0rem;
+  }
   .hero .hero_image {
     flex: 3;
     order: 2;
     height: 41rem;
     background-image: none;
-    /* background-image: url("/images/bg-intro-desktop.svg");
-    background-position: left center; */
   }
   .hero .hero_text {
     flex: 2;
@@ -341,10 +403,50 @@ button:hover,
 
   .hero_image::after {
     width: 120%;
-    height: 122%;
+    height: 125%;
     background-size: 94%;
     background-position: center 150%;
     left: 22%;
+  }
+  .feature_grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .feature_item {
+    flex: 1;
+  }
+
+  .feature_intro {
+    width: 55%;
+  }
+
+  .feature_icon {
+    margin-bottom: 2.75rem;
+  }
+
+  .feature_title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .features {
+    text-align: left;
+    padding-top: 3rem;
+  }
+  .container--pall {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  .container--py {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .container--pt {
+    padding-top: 6rem;
+  }
+
+  .container--pb {
+    padding-bottom: 6rem;
   }
 }
 
